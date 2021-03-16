@@ -10,8 +10,8 @@ const configConnection = {
 
 const mysql = require('mysql');
 const connection = mysql.createConnection(configConnection);
-const sqlInsertPeaple = `INSERT INTO peaple(name) value ('Victor ' + current_date )`;
-const sqlSelectPeaples = `SELECT NAME FROM PEAPLE as PEAPLE`;
+const sqlInsertPeaple = `INSERT INTO peaple(name) value ('Victor')`;
+const sqlSelectPeaples = `SELECT NAME FROM peaple as PEAPLE`;
 const peaples = [];
 connection.query(sqlInsertPeaple);
 connection.query(sqlSelectPeaples, (error, results, fields)=>{
